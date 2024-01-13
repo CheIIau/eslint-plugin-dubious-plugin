@@ -1,5 +1,5 @@
 # eslint-plugin-dubious-plugin
 
-Check import pathes according to FSD
+Check import paths according to FSD
 
 
