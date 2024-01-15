@@ -1,4 +1,4 @@
-# Check if a module was imported using an absolute path (`public-imports`)
+# Check if a module was imported using a public API (`public-api-import-slice`)
 
 Please describe the origin of the rule here.
 

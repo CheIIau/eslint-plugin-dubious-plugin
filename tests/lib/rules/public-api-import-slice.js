@@ -1,5 +1,5 @@
 /**
- * @fileoverview Check if a module was imported using an absolute path
+ * @fileoverview Check if a module was imported using a public API
  * @author CheIIau
  */
 "use strict";
@@ -8,7 +8,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-const rule = require("../../../lib/rules/public-imports"),
+const rule = require("../../../lib/rules/public-api-import-slice"),
     RuleTester = require("eslint").RuleTester;
 
 //------------------------------------------------------------------------------
@@ -32,7 +32,7 @@ const errors = [
     },
 ];
 
-ruleTester.run("public-imports", rule, {
+ruleTester.run("public-api-import-slice", rule, {
     valid: [
         {
             code: "import { addCommentFormActions } from '../../model/slices/addCommentForm'",
@@ -52,7 +52,7 @@ ruleTester.run("public-imports", rule, {
             options: [
                 {
                     alias: "src",
-                    ignoreFiles: ["test"],
+                    ignoreFiles: ["**/*.test.*"],
                 },
             ],
         },
@@ -63,7 +63,7 @@ ruleTester.run("public-imports", rule, {
             options: [
                 {
                     alias: "src",
-                    ignoreFiles: ["test"],
+                    ignoreFiles: ["**/*.test.*"],
                 },
             ],
         },
@@ -83,7 +83,7 @@ ruleTester.run("public-imports", rule, {
             options: [
                 {
                     alias: "src",
-                    ignoreFiles: ["test"],
+                    ignoreFiles: ["**/*.test.*"],
                 },
             ],
             output: "import { addCommentFormActions, addCommentFormReducer } from 'src/entities/Article/articleIndex'"

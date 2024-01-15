@@ -8,7 +8,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-const rule = require("../../../lib/rules/layer-imports"),
+const rule = require("../../../lib/rules/underlying-layer-imports"),
     RuleTester = require("eslint").RuleTester;
 
 //------------------------------------------------------------------------------
@@ -31,7 +31,7 @@ const ruleTester = new RuleTester({
     parserOptions: { ecmaVersion: 2023, sourceType: "module" },
 });
 
-ruleTester.run("layer-imports", rule, {
+ruleTester.run("underlying-layer-imports", rule, {
     valid: [
         {
             filename: "C:\\dubious\\src\\features\\Article",

@@ -46,7 +46,7 @@ ruleTester.run("different-layer-absolute-import", rule, {
             options: [
                 {
                     alias: "src",
-                    ignoreFiles: [".test."],
+                    ignoreFiles: ["**/*.test.*"],
                 },
             ],
         },

@@ -1,4 +1,4 @@
-# Prevent to import layer from underlying layer (`layer-imports`)
+# Prevent to import layer from underlying layer (`underlying-layer-imports`)
 
 Please describe the origin of the rule here.
 

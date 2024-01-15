@@ -8,7 +8,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-const rule = require("../../../lib/rules/path-checker"),
+const rule = require("../../../lib/rules/same-slice-local-import"),
     RuleTester = require("eslint").RuleTester;
 
 //------------------------------------------------------------------------------
@@ -18,7 +18,7 @@ const rule = require("../../../lib/rules/path-checker"),
 const ruleTester = new RuleTester({
     parserOptions: { ecmaVersion: 2023, sourceType: "module" },
 });
-ruleTester.run("path-checker", rule, {
+ruleTester.run("same-slice-local-import", rule, {
     valid: [
         {
             filename: "D:\\web\\dubious\\src\\entities\\Article",
@@ -26,7 +26,7 @@ ruleTester.run("path-checker", rule, {
             errors: [],
             options: [
                 {
-                    alias: "@",
+                    alias: "src",
                 },
             ],
         },
@@ -39,6 +39,11 @@ ruleTester.run("path-checker", rule, {
             errors: [
                 {
                     message: "All paths should be relative within one slice",
+                },
+            ],
+            options: [
+                {
+                    alias: "~",
                 },
             ],
         },

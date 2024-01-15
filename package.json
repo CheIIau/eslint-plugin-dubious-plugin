@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-dubious-plugin",
-  "version": "1.4.2",
+  "version": "1.4.4",
   "description": "some dubious plugin",
   "keywords": [
     "eslint",

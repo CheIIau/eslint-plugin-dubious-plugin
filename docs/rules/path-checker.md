@@ -1,4 +1,4 @@
-# fsd relative path checker (`path-checker`)
+# fsd relative path checker (`same-slice-local-import`)
 
 Please describe the origin of the rule here.
 
