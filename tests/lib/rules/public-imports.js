@@ -100,5 +100,17 @@ ruleTester.run("public-imports", rule, {
             ],
             output: "import { addCommentFormActions, addCommentFormReducer } from 'src/entities/Article/articleIndex'"
         },
+        {
+            filename: "D:\\web\\dubious\\src\\test\\__tests__\\foo.test.ts",
+            code: "import { addCommentFormActions, addCommentFormReducer } from 'src/entities/ArticleList/model/file.ts'",
+            errors,
+            options: [
+                {
+                    alias: "src",
+                    ignoreFiles: [],
+                },
+            ],
+            output: "import { addCommentFormActions, addCommentFormReducer } from 'src/entities/ArticleList/articleListIndex'"
+        },
     ],
 });
