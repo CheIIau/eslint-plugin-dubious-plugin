@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-dubious-plugin",
-  "version": "1.4.4",
+  "version": "1.4.6",
   "description": "some dubious plugin",
   "keywords": [
     "eslint",
@@ -8,6 +8,10 @@
     "eslint-plugin"
   ],
   "author": "CheIIau",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CheIIau/eslint-plugin-dubious-plugin.git"
+  },
   "main": "./lib/index.js",
   "exports": "./lib/index.js",
   "scripts": {

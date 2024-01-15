@@ -1,4 +1,4 @@
-# eslint-plugin-dubious-plugin [![npm](https://img.shields.io/badge/npm-v1.4.4-blue.svg)](https://www.npmjs.com/package/eslint-plugin-dubious-plugin)
+# eslint-plugin-dubious-plugin [![npm](https://img.shields.io/badge/npm-v1.4.6-blue.svg)](https://www.npmjs.com/package/eslint-plugin-dubious-plugin)
 
 ## Check import paths according to FSD
 
