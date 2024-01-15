@@ -74,7 +74,7 @@ ruleTester.run("public-imports", rule, {
             code: "import { addCommentFormActions, addCommentFormReducer } from '@/entities/Article/model/file.ts'",
             errors,
             options: aliasOptions,
-            output: "import { addCommentFormActions, addCommentFormReducer } from '@/entities/Article/articleIndex.ts'"
+            output: "import { addCommentFormActions, addCommentFormReducer } from '@/entities/Article/articleIndex'"
         },
         {
             filename: "D:\\web\\dubious\\src\\api\\index.ts",
@@ -86,7 +86,7 @@ ruleTester.run("public-imports", rule, {
                     ignoreFiles: ["test"],
                 },
             ],
-            output: "import { addCommentFormActions, addCommentFormReducer } from 'src/entities/Article/articleIndex.ts'"
+            output: "import { addCommentFormActions, addCommentFormReducer } from 'src/entities/Article/articleIndex'"
         },
         {
             filename: "D:\\web\\dubious\\src\\test\\__tests__\\foo.test.ts",
@@ -98,7 +98,7 @@ ruleTester.run("public-imports", rule, {
                     ignoreFiles: [],
                 },
             ],
-            output: "import { addCommentFormActions, addCommentFormReducer } from 'src/entities/Article/articleIndex.ts'"
+            output: "import { addCommentFormActions, addCommentFormReducer } from 'src/entities/Article/articleIndex'"
         },
     ],
 });
