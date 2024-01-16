@@ -1,4 +1,4 @@
-# eslint-plugin-dubious-plugin [![npm](https://img.shields.io/badge/npm-v1.4.6-blue.svg)](https://www.npmjs.com/package/eslint-plugin-dubious-plugin)
+# eslint-plugin-dubious-plugin [![npm](https://img.shields.io/badge/npm-v1.5.0-blue.svg)](https://www.npmjs.com/package/eslint-plugin-dubious-plugin)
 
 ## Check import paths according to FSD
 
@@ -7,11 +7,12 @@ The plugin contain 4 rules:
 1. different-layer-absolute-import (Prevents the use of relative import to import from other layers)
 2. underlying-layer-imports (Prevents to import a layer from underlying layer)
 3. public-api-import-slice (Check if a module was imported using a public API)
-4. same-slice-local-import (Prevents the use of absolute import within one slice)
+4. different-layer-export (Prevents exporting a module from another layer)
+5. same-slice-local-import (Prevents the use of absolute import within one slice)
 
 ## Rule options
 
-First 3 rules (**different-layer-absolute-import**, **underlying-layer-imports** and **public-api-import-slice**) have all the options below. The last one has only **_alias_** option. Also **public-api-import-slice** and **public-api-import-slice** rules have autofix.
+First 4 rules (**different-layer-absolute-import**, **underlying-layer-imports**, **public-api-import-slice**, **different-layer-export**) have all the options below. The last one (same-slice-local-import) has only **_alias_** option. Also **public-api-import-slice** and **public-api-import-slice** rules have autofix.
 
 ```
 {

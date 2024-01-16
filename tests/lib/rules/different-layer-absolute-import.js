@@ -1,5 +1,5 @@
 /**
- * @fileoverview You should use absolute path to import from another layer
+ * @fileoverview You should use absolute path to import from different layer
  * @author CheIIau
  */
 "use strict";
@@ -17,7 +17,7 @@ const rule = require("../../../lib/rules/different-layer-absolute-import"),
 
 const errors = [
     {
-        message: "You should use absolute path to import from another layer",
+        message: "You should use absolute path to import from different layer",
     },
 ];
 
@@ -59,6 +59,20 @@ ruleTester.run("different-layer-absolute-import", rule, {
             errors,
             options: aliasOptions,
             output: "import { addCommentFormActions, addCommentFormReducer } from 'src/shared/Button.tsx'",
+        },
+        {
+            filename: "C:\\dubious\\src\\features\\Article\\File.tsx",
+            code: "import { addCommentFormActions, addCommentFormReducer } from '../../../entities/Button.tsx'",
+            errors,
+            options: aliasOptions,
+            output: "import { addCommentFormActions, addCommentFormReducer } from 'src/entities/Button.tsx'",
+        },
+        {
+            filename: "C:\\dubious\\src\\entities\\Article\\articleIndex.ts",
+            code: "import { ArticleViewSelector } from '../../../features/ArticleViewSelector/ui/ArticleViewSelector'",
+            errors,
+            options: aliasOptions,
+            output: "import { ArticleViewSelector } from 'src/features/ArticleViewSelector/ui/ArticleViewSelector'",
         },
     ],
 });

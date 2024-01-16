@@ -1,4 +1,4 @@
-# You should use absolute path to import from different layer (`different-layer-absolute-import`)
+# Prevents exporting a module from another layer (`different-layer-export`)
 
 Please describe the origin of the rule here.
 
