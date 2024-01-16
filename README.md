@@ -2,7 +2,7 @@
 
 ## Check import paths according to FSD
 
-The plugin contain 4 rules:
+The plugin contain 5 rules:
 
 1. different-layer-absolute-import (Prevents the use of relative import to import from other layers)
 2. underlying-layer-imports (Prevents to import a layer from underlying layer)
