@@ -1,4 +1,4 @@
-# eslint-plugin-dubious-plugin [![npm](https://img.shields.io/badge/npm-v1.5.1-blue.svg)](https://www.npmjs.com/package/eslint-plugin-dubious-plugin)
+# eslint-plugin-dubious-plugin [![npm](https://img.shields.io/badge/npm-v1.5.2-blue.svg)](https://www.npmjs.com/package/eslint-plugin-dubious-plugin)
 
 ## Check import paths according to FSD
 
@@ -12,7 +12,7 @@ The plugin contain 4 rules:
 
 ## Rule options
 
-First 4 rules (**different-layer-absolute-import**, **underlying-layer-imports**, **public-api-import-slice**, **different-layer-export**) have all the options below. The last one (same-slice-local-import) has only **_alias_** option. Also **public-api-import-slice** and **public-api-import-slice** rules have autofix.
+First 4 rules (**different-layer-absolute-import**, **underlying-layer-imports**, **public-api-import-slice**, **different-layer-export**) have all the options below. The last one (same-slice-local-import) has only **_alias_** option. Also **public-api-import-slice**, **public-api-import-slice** and **same-slice-local-import** rules have autofix.
 
 ```
 {

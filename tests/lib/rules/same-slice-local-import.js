@@ -21,8 +21,8 @@ const ruleTester = new RuleTester({
 ruleTester.run("same-slice-local-import", rule, {
     valid: [
         {
-            filename: "D:\\web\\dubious\\src\\entities\\Article",
-            code: "import { addCommentFormActions, addCommentFormReducer } from '../../model/slices/addCommentFormSlice'",
+            filename: "D:\\web\\dubious\\src\\entities\\Article\\ui\\file.tsx",
+            code: "import { addCommentFormActions, addCommentFormReducer } from '../../model/slices/addCommentFormSlice/addCommentFormSliceIndex.ts'",
             errors: [],
             options: [
                 {
@@ -34,7 +34,7 @@ ruleTester.run("same-slice-local-import", rule, {
 
     invalid: [
         {
-            filename: "D:\\web\\dubious\\src\\entities\\Article",
+            filename: "D:\\web\\dubious\\src\\entities\\Article\\ui\\file.tsx",
             code: "import { addCommentFormActions, addCommentFormReducer } from 'src/entities/Article/model/slices/addCommentFormSlice'",
             errors: [
                 {
@@ -43,9 +43,10 @@ ruleTester.run("same-slice-local-import", rule, {
             ],
             options: [
                 {
-                    alias: "~",
+                    alias: "src",
                 },
             ],
+            output: "import { addCommentFormActions, addCommentFormReducer } from '../model/slices/addCommentFormSlice'"
         },
     ],
 });
